@@ -1,80 +1,86 @@
-import { MdArrowOutward } from "react-icons/md";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+// Kompletny szablon strony React + Vite + Tailwind CSS
+// Możesz użyć tego kodu w StackBlitz lub jako lokalny projekt React
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
 
 function App() {
   return (
-    <div className="flex flex-col items-center max-w-screen h-dvh text-center pt-40">
-      <div className="flex">
-        <a href="https://vite.dev" target="_blank">
-          <img
-            src={viteLogo}
-            className="h-32 p-6 transition-[filter] duration-300 will-change-[filter] hover:filter hover:drop-shadow-[0_0_2em_#646cffaa]"
-            alt="Vite logo"
-          />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img
-            src={reactLogo}
-            className="h-32 p-6 transition-[filter] duration-300 will-change-[filter] hover:filter hover:drop-shadow-[0_0_2em_#61dafbaa] animate-spin-slow"
-            alt="React logo"
-          />
-        </a>
-      </div>
-      <h1 className="sm:text-5xl text-3xl font-bold tracking-tight md:text-5xl relative">
-        <span className="relative z-10 text-2xl">
-          Vite + React + Percept UI
-        </span>
-        <span
-          className="absolute inset-0 animate-pulse-glow bg-gradient-to-r from-blue-500/60 to-pink-500/60 blur-xl"
-          aria-hidden="true"
-        ></span>
-      </h1>
-      <h1 className="text-xl font-bold my-4">
-        This project is bootstrapped with Tailwind CSS and Percept UI
-      </h1>
-      <div className="p-[2em]">
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="text-slate-400">
-        Click on the Vite and React logos to learn more
-      </p>
-      <div className="flex items-center justify-center gap-3">
-        <a
-          className="flex flex-col items-start justify-center h-24 p-3 border rounded-lg hover:bg-slate-900 mt-5 min-w-40 relative"
-          href="https://perceptui.vercel.app"
-          target="_blank"
-        >
-          Learn More About
-          <span className="font-bold relative w-full text-start">
-            PERCEPT UI{" "}
-            <MdArrowOutward className="absolute top-1 right-1 text-xl" />
-          </span>
-          <span
-            className="absolute inset-0 animate-pulse-glow bg-gradient-to-r from-blue-500/60 to-pink-500/60 blur-2xl"
-            aria-hidden="true"
-          ></span>
-        </a>
-        <a
-          className="flex flex-col items-start justify-center h-24 p-3 border rounded-lg hover:bg-slate-900 mt-5 relative min-w-40"
-          href="https://github.com/perceptui/ui"
-          target="_blank"
-        >
-          Checkout Us On
-          <span className="font-bold relative w-full text-start">
-            GITHUB
-            <MdArrowOutward className="absolute top-1 right-1 text-xl" />
-          </span>
-          <span
-            className="absolute inset-0 animate-pulse-glow bg-gradient-to-r from-blue-500/60 to-pink-500/60 blur-2xl"
-            aria-hidden="true"
-          ></span>
-        </a>
-      </div>
+    <div className="min-h-screen bg-gray-50 text-gray-900 font-sans">
+      <header className="bg-white shadow-md py-6 px-4 md:px-12">
+        <h1 className="text-3xl font-bold">HR Pro Solutions</h1>
+        <p className="text-sm text-gray-600">Kompleksowe usługi kadrowo-płacowe dla biznesu B2B</p>
+      </header>
+
+      <main className="px-4 md:px-12 py-10">
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4">Kim jesteśmy?</h2>
+          <p>
+            Jesteśmy zespołem ekspertów HR z doświadczeniem w obsłudze firm każdej wielkości.
+            Naszą misją jest zdjęcie z Twoich barków obowiązków kadrowo-płacowych i zapewnienie Ci pełnej zgodności z przepisami.
+          </p>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4">Nasze usługi</h2>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Outsourcing kadr i płac (pełna obsługa)</li>
+            <li>Prowadzenie dokumentacji pracowniczej</li>
+            <li>Zgłoszenia i rozliczenia z ZUS</li>
+            <li>Wsparcie PPK, urlopy, L4, PIT-11</li>
+            <li>Audyt dokumentacji HR</li>
+            <li>Szkolenia i doradztwo z zakresu prawa pracy</li>
+          </ul>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4">Dla kogo?</h2>
+          <p>
+            Obsługujemy klientów B2B: jednoosobowe działalności, startupy, firmy z sektora MŚP oraz większe organizacje bez własnego działu HR.
+          </p>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4">Opinie klientów</h2>
+          <blockquote className="border-l-4 border-blue-400 pl-4 italic text-gray-700">
+            "Wreszcie mam święty spokój z kadrami. Polecam każdemu przedsiębiorcy!" – Anna, właścicielka agencji marketingowej
+          </blockquote>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4">Skontaktuj się z nami</h2>
+          <form className="space-y-4">
+            <input
+              type="text"
+              placeholder="Imię i nazwisko"
+              className="w-full p-2 border border-gray-300 rounded"
+            />
+            <input
+              type="email"
+              placeholder="Adres e-mail"
+              className="w-full p-2 border border-gray-300 rounded"
+            />
+            <textarea
+              placeholder="W czym możemy pomóc?"
+              className="w-full p-2 border border-gray-300 rounded h-32"
+            ></textarea>
+            <button
+              type="submit"
+              className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700"
+            >
+              Wyślij wiadomość
+            </button>
+          </form>
+        </section>
+      </main>
+
+      <footer className="bg-white text-center text-sm text-gray-500 py-6">
+        &copy; 2025 HR Pro Solutions – Wszystkie prawa zastrzeżone.
+      </footer>
     </div>
   );
 }
 
-export default App;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
